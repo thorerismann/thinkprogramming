@@ -36,8 +36,6 @@ def wordcount(x,y):
 
 def wordset(x):
     clean = ""
-    for i in x:
-        if i
     return clean
 
 def longestword(x):
