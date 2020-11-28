@@ -35,9 +35,15 @@ def wordcount(x,y):
     return count
 
 def wordset(x):
-    clean = ""
+    clean = []
+    for i in x:
+        if i not in clean:
+            clean.append(i)
     return clean
 
 def longestword(x):
-    total = 0
-    return total
+    longest = 0
+    for i in range(len(x)):
+        if len(x[i]) > longest:
+            longest = len(x[i])
+    return longest

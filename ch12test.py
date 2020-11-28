@@ -26,7 +26,20 @@ def testwc():
     test.testy(ch12ex.wordcount("time", ["now", "is", "time", "is", "now", "is", "is"]) == 1)
     test.testy(ch12ex.wordcount("frog", ["now", "is", "time", "is", "now", "is", "is"]) == 0)
 
+def testws():
+    test.testy(ch12ex.wordset(["now", "is", "time", "is", "now", "is", "is"]) == ["is", "now", "time"])
+    test.testy(ch12ex.wordset(["I", "a", "a", "is", "a", "is", "I", "am"]) == ["I", "a", "am", "is"])
+    test.testy(ch12ex.wordset(["or", "a", "am", "is", "are", "be", "but", "am"]) == ["a", "am", "are", "be", "but", "is", "or"])
+
+def testlw():
+    test.testy(ch12ex.longestword(["a", "apple", "pear", "grape"]) == 5)
+    test.testy(ch12ex.longestword(["a", "am", "I", "be"]) == 2)
+    test.testy(ch12ex.longestword(["this", "supercalifragilisticexpialidocious"]) == 34)
+    test.testy(ch12ex.longestword([]) == 0)
+
 testcw()
 testhd()
 testew()
 testwc()
+testws()
+testlw()
