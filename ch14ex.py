@@ -132,15 +132,17 @@ def merge_two(x, y):
             for j in range(len(y)):
                 if y[j-1] == x[i]:
                     del y[j-1]
+                    del x[i]
+                    continue
             print(x)
-            del x[i]
+            print(y)
         else:
             i += 1
 
 
 #code to test 1e
-x = [1,1,2,3,4,5,6,6,45,4,4,44]
-y = [1,1,2,4,5,5]
+x = [1,1,2,3,4,5]
+y = [1,2,3,4,6,8]
 print(merge_two(x,y))
 
 #code to test 1a-1d
